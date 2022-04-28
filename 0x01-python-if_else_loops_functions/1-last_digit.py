@@ -9,7 +9,9 @@ else:
     sign = ''
     unsigned = number
 last = unsigned % 10
-if last > 5:
+if number < 0:
+    print(f"Last digit of {number} is {last} and is less than 6 and not 0")
+elif last > 5:
     print(f"Last digit of {number} is {last} and is greater than 5")
 elif last == 0:
     print(f"Last digit of {number} is {last} and is 0")
