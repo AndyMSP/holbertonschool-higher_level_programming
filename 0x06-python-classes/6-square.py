@@ -30,7 +30,7 @@ class Square:
 
     @position.setter
     def position(self, value):
-        emessage = "position must be a tuple of 2 positive integers" 
+        emessage = "position must be a tuple of 2 positive integers"
         try:
             if all([isinstance(i, int) for i in value]) and len(value) == 2 \
                     and value[0] >= 0 and value[1] >= 0:
