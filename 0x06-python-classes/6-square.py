@@ -35,11 +35,9 @@ class Square:
                     and value[0] >= 0 and value[1] >= 0:
                 self.__position = value
             else:
-                raise TypeError("position must be a tuple of\
-                     2 positive integers")
+                raise TypeError("position must be a tuple of 2 positive integers")
         except IndexError:
-            raise TypeError("position must be a tuple of\
-                     2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
 
     def my_print(self):
         if self.__size == 0 and self.__position[1] != 0:
