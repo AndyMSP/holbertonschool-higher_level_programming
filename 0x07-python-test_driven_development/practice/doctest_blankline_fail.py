@@ -1,0 +1,13 @@
+# doctest_blankline_fail.py
+def double_space(lines):
+    """Prints a list of lines double-spaced.
+
+    >>> double_space(['Line one.', 'Line two.'])
+    Line one.
+    <BLDANKLINE>
+    Line two.
+    <BLANKLINE>
+    """
+    for l in lines:
+        print(l)
+        print()
