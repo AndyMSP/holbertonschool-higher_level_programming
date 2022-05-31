@@ -1,1 +1,7 @@
-#some text
+#0-add_integer.txt
+
+add_integer adds two integers
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(2, 3)
+5
