@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+"""Module to add numbers"""
 
 def add_integer(a, b=98):
+    """Addition function"""
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
     elif not isinstance(b, (int, float)):
