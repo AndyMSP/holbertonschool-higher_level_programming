@@ -1,0 +1,41 @@
+Test file for 1-rectangle.py
+----------------------------
+
+
+Import module
+-------------
+
+>>> Rectangle = __import__('1-rectangle').Rectangle
+
+
+Successful cases
+----------------
+
+>>> my_rectangle = Rectangle(2, 4)
+>>> print(f"width = {my_rectangle.width}, height = {my_rectangle.height}")
+width = 2, height = 4
+
+>>> my_rectangle.width = 10
+>>> my_rectangle.height = 3
+>>> print(f"width = {my_rectangle.width}, height = {my_rectangle.height}")
+width = 10, height = 3
+
+
+Failure cases
+-------------
+
+>>> neg_width = Rectangle(-2, 12)
+Traceback (most recent call last):
+ValueError: width must be >= 0
+
+>>> string_width = Rectangle("32", 12)
+Traceback (most recent call last):
+TypeError: width must be an integer
+
+>>> neg_height = Rectangle(15, -5)
+Traceback (most recent call last):
+ValueError: height must be >= 0
+
+>>> string_height = Rectangle(15, "test")
+Traceback (most recent call last):
+TypeError: height must be an integer
