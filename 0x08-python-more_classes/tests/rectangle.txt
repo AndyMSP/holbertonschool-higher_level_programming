@@ -15,10 +15,16 @@ Successful cases
 >>> print(f"width = {my_rectangle.width}, height = {my_rectangle.height}")
 width = 2, height = 4
 
+>>> print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+Area: 8 - Perimeter: 12
+
 >>> my_rectangle.width = 10
 >>> my_rectangle.height = 3
 >>> print(f"width = {my_rectangle.width}, height = {my_rectangle.height}")
 width = 10, height = 3
+
+>>> print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+Area: 30 - Perimeter: 12
 
 
 Failure cases
