@@ -15,6 +15,7 @@ Successful cases
 >>> print(f"width = {my_rectangle.width}, height = {my_rectangle.height}")
 width = 2, height = 4
 
+>>> my_rectangle = Rectangle(2, 4)
 >>> print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
 Area: 8 - Perimeter: 12
 
@@ -23,6 +24,7 @@ Area: 8 - Perimeter: 12
 >>> print(f"width = {my_rectangle.width}, height = {my_rectangle.height}")
 width = 10, height = 3
 
+>>> my_rectangle = Rectangle(10, 3)
 >>> print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
 Area: 30 - Perimeter: 12
 
