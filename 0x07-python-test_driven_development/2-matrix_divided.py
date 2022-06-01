@@ -3,6 +3,7 @@
 
 
 def matrix_divided(matrix, div):
+    """Function to divide all elements in Matrix by div"""
     if not all([all([isinstance(j, (int, float))
                 for j in i]) for i in matrix]):
         raise TypeError("matrix must be a matrix (list of lists)\
