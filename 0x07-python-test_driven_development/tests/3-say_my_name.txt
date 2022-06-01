@@ -12,7 +12,7 @@ Success cases
 My name is Andy Stone
 
 >>> say_my_name("Katie")
-My name is Katie
+My name is Katie 
 
 
 
