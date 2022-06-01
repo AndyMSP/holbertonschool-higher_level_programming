@@ -8,5 +8,5 @@ matrix = [
 
 # matrix = [3, 9]
 
-print(matrix_divided(matrix, 3))
+print(matrix_divided())
 print(matrix)
