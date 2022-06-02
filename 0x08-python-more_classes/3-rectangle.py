@@ -50,4 +50,7 @@ class Rectangle:
 
     def __str__(self):
         """Method to define __str__"""
-        return (("#" * self.width + "\n") * self.height)[:-1]
+        if self.width == 0 or self.height == 0:
+            return ""
+        else:
+            return (("#" * self.width + "\n") * self.height)[:-1]
