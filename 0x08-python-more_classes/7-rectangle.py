@@ -54,7 +54,7 @@ class Rectangle:
 
     def __str__(self):
         """Method to define __str__"""
-        print_str = type(self).print_symbol.__str__()
+        print_str = self.print_symbol.__str__()
         if self.width == 0 or self.height == 0:
             return ""
         else:
