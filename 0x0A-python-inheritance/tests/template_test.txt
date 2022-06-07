@@ -30,8 +30,8 @@ CASES THAT SHOULD NOT WORK
 Category 2
 ==========
 
-Test 2: Test Name
+Test #
 #>>> Name_of_function(parameters)
-Traceback (comment)
+Traceback (most recent call last):
   ...
 TypeError: Error message

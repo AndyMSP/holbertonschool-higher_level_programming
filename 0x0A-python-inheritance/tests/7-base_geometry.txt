@@ -1,0 +1,47 @@
+============================================
+''' Testing for 7-base_geometry.py '''
+============================================
+''' TESTTING WITH the following... '''
+
+# python3 -m doctest -v ./tests/file_name.txt
+
+======================================
+''' Importing TEMPLATE function''''
+======================================
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+==============
+SUCCESS CASES
+==============
+
+
+Category 1
+==========
+
+Test 1:
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("width", 89)
+
+
+==========================
+CASES THAT SHOULD NOT WORK
+==========================
+
+Category 2
+==========
+
+Test 2
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+Test 3
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+Test 4
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+ValueError: distance must be greater than 0
