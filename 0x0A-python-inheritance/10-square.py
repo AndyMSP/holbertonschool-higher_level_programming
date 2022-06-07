@@ -1,4 +1,5 @@
 #!/usr/bin/python
+"""Module containing the definition for a class of type square"""
 
 Rectangle = __import__('9-rectangle').Rectangle
 
