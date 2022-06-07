@@ -10,7 +10,7 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """function called on instantiation"""
-        super().integer_validator(self, width)
-        super().integer_validator(self, height)
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
         __width = width
         __height = height
