@@ -1,0 +1,39 @@
+============================================
+''' This is the Start of Unit Testing... '''
+============================================
+''' TESTTING WITH the following... '''
+
+# python3 -m doctest -v ./tests/file_name.txt
+
+======================================
+''' Importing TEMPLATE function''''
+======================================
+>>>MyList = __import__('1-my_list').MyList
+
+==============
+SUCCESS CASES
+==============
+
+
+Category 1
+==========
+
+Test 1:
+>>> my_list = MyList([1, 4, 2, 3, 5])
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+
+==========================
+CASES THAT SHOULD NOT WORK
+==========================
+
+Category 2
+==========
+
+Test 2: Test Name
+  ''' comment '''
+#>>> Name_of_function(parameters)
+Traceback (comment)
+  ...
+TypeError: Error message

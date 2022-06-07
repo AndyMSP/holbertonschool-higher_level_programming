@@ -1,0 +1,37 @@
+============================================
+''' This is the Start of Unit Testing... '''
+============================================
+''' TESTTING WITH the following... '''
+
+# python3 -m doctest -v ./tests/file_name.txt
+
+======================================
+''' Importing TEMPLATE function''''
+======================================
+#>>> holder = import('module').function_being_tested
+
+==============
+SUCCESS CASES
+==============
+
+
+Category 1
+==========
+
+Test 1:
+#>>> Name_of_function(parameters)
+the_output
+
+
+==========================
+CASES THAT SHOULD NOT WORK
+==========================
+
+Category 2
+==========
+
+Test 2: Test Name
+#>>> Name_of_function(parameters)
+Traceback (comment)
+  ...
+TypeError: Error message
