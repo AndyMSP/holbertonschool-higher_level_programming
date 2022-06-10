@@ -21,4 +21,5 @@ def add_items():
     save_to_json_file(new_list, 'add_items.json')
 
 
-add_items()
+if __name__ == "__main__":
+    add_items()
