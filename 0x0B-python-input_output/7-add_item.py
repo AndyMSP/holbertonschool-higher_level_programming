@@ -11,14 +11,14 @@ def add_items():
         __import__('6-load_from_json_file').load_from_json_file
 
     try:
-        old_list = load_from_json_file('add_items.json')
+        old_list = load_from_json_file('add_item.json')
     except Exception:
         old_list = []
 
     new_items = sys.argv[1:]
     new_list = old_list + new_items
 
-    save_to_json_file(new_list, 'add_items.json')
+    save_to_json_file(new_list, 'add_item.json')
 
 
 if __name__ == "__main__":
