@@ -18,7 +18,5 @@ class Student:
             return d
         else:
             tmp = set(d) & set(attrs)
-            new_d = dict()
-            for k in tmp:
-                new_d.update({k: d.get(k)})
+            new_d = {k:v for (k,v) in d.items() if k in tmp}
             return new_d
