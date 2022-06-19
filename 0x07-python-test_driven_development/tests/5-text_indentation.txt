@@ -20,35 +20,35 @@ Category 1
 
 Test 1:
 >>> text_indentation("line1.line2. line3")
-line1
+line1.
 <BLANKLINE>
-line2
+line2.
 <BLANKLINE>
 line3
 
 Test 2:
 >>> text_indentation("line1?line2 ?line3")
-line1
+line1?
 <BLANKLINE>
-line2
+line2 ?
 <BLANKLINE>
 line3
 
 Test 3:
 >>> text_indentation("line1:line2:line3")
-line1
+line1:
 <BLANKLINE>
-line2
+line2:
 <BLANKLINE>
 line3
 
 Test 4:
 >>> text_indentation("   line 1 .line 2 ?line 3:line 4")
-line 1
+line 1 .
 <BLANKLINE>
-line 2
+line 2 ?
 <BLANKLINE>
-line 3
+line 3:
 <BLANKLINE>
 line 4
 
