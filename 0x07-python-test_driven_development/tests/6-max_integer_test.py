@@ -12,3 +12,4 @@ class TestMaxInteger(unittest.TestCase):
         self.assertAlmostEqual(max_integer(['a', 'b']), 'b')
         self.assertAlmostEqual(max_integer([1, 2, 3, 3, 3, 3, 3]), 3)
         self.assertAlmostEqual(max_integer([]), None)
+        self.assertAlmostEqual(max_integer([5, 4, 3, 2, 1]), 5)
