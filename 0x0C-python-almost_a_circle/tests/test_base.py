@@ -16,3 +16,6 @@ class Test_1(unittest.TestCase):
         self.assertAlmostEqual(b2.id, 2)
         b3 = Base(10)
         self.assertAlmostEqual(b3.id, 10)
+
+if __name__ == '__main__':
+    unittest.main()
