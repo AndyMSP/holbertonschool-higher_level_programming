@@ -7,10 +7,6 @@ import subprocess
 def run_command(cmd):
     process = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     output, error = process.communicate()
-    print(output)
-    print()
-    print(error)
-    print()
     return "{}{}".format(output, error)
 
 
@@ -19,19 +15,9 @@ def run_unittest():
     is_success = False
     try:
         res = run_command("python3 -m unittest discover tests")
-
-        print(f"res type is {type(res)}")
-        print()
-        print(res)
-        print()
         for line in res.split("\\n"):
-            print(line)
             if "Ran " in line:
-                print("how about here")
                 nb_tests = int(res.split("Ran ")[-1].split(" tests")[0])
-                print(nb_tests)
-                print()
-                print("getting here?")
             if nb_tests > 0 and "OK" in line:
                 is_success = True
     except:
@@ -39,14 +25,9 @@ def run_unittest():
         is_success = False
     return nb_tests, is_success
 
+
 # validate tests are passing by default
 nb_tests, passing = run_unittest()
-
-print()
-print(nb_tests)
-print()
-print(passing)
-print()
 
 if nb_tests <= 0:
     print("No test found")
