@@ -1,0 +1,77 @@
+============================================
+''' 0x07-python-test_driven_development Task 5 '''
+============================================
+''' TESTTING WITH the following... '''
+
+# python3 -m doctest -v ./tests/file_name.txt
+
+======================================
+''' Importing TEMPLATE function''''
+======================================
+>>> text_indentation = text_indentation = __import__('5-text_indentation').text_indentation
+
+==============
+SUCCESS CASES
+==============
+
+
+Category 1
+==========
+
+Test 1:
+>>> text_indentation("line1.line2. line3")
+line1
+<BLANKLINE>
+line2
+<BLANKLINE>
+line3
+
+Test 2:
+>>> text_indentation("line1?line2 ?line3")
+line1
+<BLANKLINE>
+line2
+<BLANKLINE>
+line3
+
+Test 3:
+>>> text_indentation("line1:line2:line3")
+line1
+<BLANKLINE>
+line2
+<BLANKLINE>
+line3
+
+Test 4:
+>>> text_indentation("   line 1 .line 2 ?line 3:line 4")
+line 1
+<BLANKLINE>
+line 2
+<BLANKLINE>
+line 3
+<BLANKLINE>
+line 4
+
+Test 5:
+>>> text_indentation("")
+
+Test 6:
+>>> text_indentation("    	")
+
+Test 7:
+>>> text_indentation('only line')
+only line
+
+
+
+==========================
+CASES THAT SHOULD NOT WORK
+==========================
+
+Category 2
+==========
+
+Test 2:
+>>> text_indentation(1)
+Traceback (most recent call last):
+TypeError: text must be a string
