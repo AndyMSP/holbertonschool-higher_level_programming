@@ -23,3 +23,11 @@ class Test_2(unittest.TestCase):
         self.assertAlmostEqual(r2.height, 8)
         self.assertAlmostEqual(r2.x, 0)
         self.assertAlmostEqual(r2.y, 0)
+
+class Test_3(unittest.TestCase):
+    """Unit tests for task 3"""
+    def test_validate_input(self):
+        """Test that bad input raises errors"""
+        Rectangle.reset()
+        with self.assertRaisesRegex(TypeError, 'height must be an integer'):
+            r1 = Rectangle(10, 'hello')
