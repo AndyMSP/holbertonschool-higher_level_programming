@@ -9,7 +9,8 @@ from models.rectangle import Rectangle
 class Test_2(unittest.TestCase):
     """Unit tests for task 2"""
     def test_rect_instantiation(self):
-        """Test that object can be instantiated given various inputs"""
+        """Test that Rectangle object can be instantiated given various inputs"""
+        Rectangle.reset()
         r1 = Rectangle(2, 3, 4, 5, 6)
         r2 = Rectangle(7, 8)
         self.assertAlmostEqual(r1.id, 6)

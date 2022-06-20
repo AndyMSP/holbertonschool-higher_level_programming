@@ -16,6 +16,11 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    @classmethod
+    def reset(self):
+        """Reset all class attributes"""
+        super().reset()
+
     @property
     def width(self):
         """Method to retrieve value of private variable __width"""
