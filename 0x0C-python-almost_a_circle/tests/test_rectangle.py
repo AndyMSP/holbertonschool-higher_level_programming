@@ -31,3 +31,10 @@ class Test_3(unittest.TestCase):
         Rectangle.reset()
         with self.assertRaisesRegex(TypeError, 'height must be an integer'):
             r1 = Rectangle(10, 'hello')
+        with self.assertRaisesRegex(ValueError, 'width must be > 0'):
+            r2 = Rectangle(10, 2)
+            r2.width = -10
+        with self.assertRaisesRegex(TypeError, 'x must be an integer'):
+            r3 = Rectangle(1, 2)
+            r3.x = {}
+        self.assertAlmostEqual(r3.id, 2)
