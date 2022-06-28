@@ -10,20 +10,18 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """Called on instantiation of new Square object"""
-        self.size = size
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
         """Method to get value of variable size"""
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
         """Method to set size variable"""
-        self.__size = value
-        self.width = self.__size
-        self.height = self.__size
+        self.width = value
+        self.height = value
 
     def __str__(self):
         """return string representation of object"""
