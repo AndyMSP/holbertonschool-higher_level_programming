@@ -13,14 +13,18 @@ class Square(Rectangle):
         self.size = size;
         super().__init__(size, size, x, y, id)
 
-    def size_setter(self):
-        """Method to set value of variable size"""
-        self.width = self.size
-        self.height = self.size
+    @property
+    def size(self):
+        """Method to get value of variable size"""
+        return self.__size
 
-    def size_getter(self):
-        """Method to retrieve size variable"""
-        return self.size
+    @size.setter
+    def size(self, value):
+        """Method to set size variable"""
+        self.validate('size', value)
+        self.__size = value
+        self.width = self.__size
+        self.height = self.__size
         
 
     def __str__(self):
