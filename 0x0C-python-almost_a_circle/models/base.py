@@ -2,6 +2,9 @@
 """Module defines Base class"""
 
 
+import json
+
+
 class Base:
     """Base class for managing id attribute in other classes"""
 
@@ -23,7 +26,6 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """Return JSON string representation of a list of dictionaries"""
-        import json
         if list_dictionaries is None or list_dictionaries == []:
             return '[]'
         return json.dumps(list_dictionaries)
