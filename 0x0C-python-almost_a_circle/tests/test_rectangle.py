@@ -38,3 +38,19 @@ class Test_3(unittest.TestCase):
             r3 = Rectangle(1, 2)
             r3.x = {}
         self.assertAlmostEqual(r3.id, 2)
+        with self.assertRaisesRegex(TypeError, 'width must be an integer'):
+            r4 = Rectangle('hi', 6)
+        with self.assertRaisesRegex(TypeError, 'x must be an integer'):
+            r5 = Rectangle(6, 7, 'hey')
+        with self.assertRaisesRegex(TypeError, 'y must be an integer'):
+            r6 = Rectangle(6, 7, 8, 'howdy')
+        with self.assertRaisesRegex(ValueError, 'width must be > 0'):
+            r7 = Rectangle(-1, 2)
+        with self.assertRaisesRegex(ValueError, 'width must be > 0'):
+            r8 = Rectangle(0, 2)
+        with self.assertRaisesRegex(ValueError, 'height must be > 0'):
+            r9 = Rectangle(1, 0)
+        with self.assertRaisesRegex(ValueError, 'x must be >= 0'):
+            r10 = Rectangle(1, 2, -3)
+        with self.assertRaisesRegex(ValueError, 'y must be >= 0'):
+            r11 = Rectangle(1, 2, 3, -4)
