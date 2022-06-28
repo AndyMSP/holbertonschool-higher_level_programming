@@ -73,3 +73,6 @@ class Rectangle(Base):
         """Method to set value of private variable __y"""
         self.validate('y', value)
         self.__y = value
+
+    def area(self):
+        return self.width * self.height

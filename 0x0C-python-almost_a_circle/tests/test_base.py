@@ -15,6 +15,7 @@ class Test_1(unittest.TestCase):
         self.assertAlmostEqual(b1.id, 1)
         b2 = Base()
         self.assertAlmostEqual(b2.id, 2)
+
     def test_id_with_input(self):
         """Test that id can be assigned during instantiation"""
         Base.reset()
