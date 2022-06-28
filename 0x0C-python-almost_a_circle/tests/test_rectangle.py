@@ -71,4 +71,4 @@ class Test_6(unittest.TestCase):
     def test_str(self):
         Rectangle.reset()
         r1 = Rectangle(4, 6, 2, 1, 12)
-        self.assertEqual(r1.__str__(), '[Rectangle] (12) 2/1 4/6')
+        self.assertEqual(r1.__str__(), '[Rectangle] (12) 2/1 - 4/6')
