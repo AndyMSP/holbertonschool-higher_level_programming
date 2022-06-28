@@ -2,6 +2,9 @@
 """Module defines Base class"""
 
 
+import json
+
+
 class Base:
     """Base class for managing id attribute in other classes"""
 
@@ -19,3 +22,10 @@ class Base:
     def reset(cls):
         """Reset all class variables"""
         cls.__nb_objects = 0
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Return JSON string representation of a list of dictionaries"""
+        if list_dictionaries is None or list_dictionaries == []:
+            return []
+        return json.dumps(list_dictionaries)
