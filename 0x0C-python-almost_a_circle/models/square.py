@@ -12,6 +12,10 @@ class Square(Rectangle):
         """Called on instantiation of new Square object"""
         super().__init__(size, size, x, y, id)
 
+    @property
+    def size(self):
+        """Method to retrieve value of private"""
+
     def __str__(self):
         """return string representation of object"""
         return (
