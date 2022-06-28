@@ -10,7 +10,6 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """Called on instantiation of new Square object"""
-        self.size = size;
         super().__init__(self.size, self.size, x, y, id)
 
     @property
@@ -24,7 +23,6 @@ class Square(Rectangle):
         self.__size = value
         self.width = self.__size
         self.height = self.__size
-        
 
     def __str__(self):
         """return string representation of object"""
