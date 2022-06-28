@@ -11,7 +11,7 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """Called on instantiation of new Square object"""
         self.size = size;
-        super().__init__(size, size, x, y, id)
+        super().__init__(self.size, self.size, x, y, id)
 
     @property
     def size(self):
@@ -21,7 +21,6 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         """Method to set size variable"""
-        self.validate('size', value)
         self.__size = value
         self.width = self.__size
         self.height = self.__size
