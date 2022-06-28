@@ -58,9 +58,17 @@ class Test_3(unittest.TestCase):
 
 
 class Test_4(unittest.TestCase):
-    """Unit tests for task 3"""
+    """Unit tests for task 4"""
     def test_area(self):
         """Test that area function works properly"""
         Rectangle.reset()
         r1 = Rectangle(3, 4)
         self.assertAlmostEqual(r1.area(), 12)
+
+
+class Test_6(unittest.TestCase):
+    """Unit tests for task 6"""
+    def test_str(self):
+        Rectangle.reset()
+        r1 = Rectangle(4, 6, 2, 1, 12)
+        self.assertEqual(r1.__str__(), '[Rectangle] (12) 2/1 4/6')
