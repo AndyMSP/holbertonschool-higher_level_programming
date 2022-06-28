@@ -80,8 +80,9 @@ class Rectangle(Base):
 
     def display(self):
         """display rectangle with # symbol"""
+        print(self.y * '\n', end='')
         for i in range(self.height):
-            print(self.width * '#')
+            print(self.x * ' ' + self.width * '#')
 
     def __str__(self):
         """return string representation of object"""
