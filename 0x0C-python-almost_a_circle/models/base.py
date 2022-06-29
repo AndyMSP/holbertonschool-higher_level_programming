@@ -29,3 +29,21 @@ class Base:
         if list_dictionaries is None or list_dictionaries == []:
             return '[]'
         return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """Writes JSON representation of objects to a file"""
+        if cls.__name__ == 'Rectangle':
+            filename = 'Rectangle.json'
+        if cls.__name__ == 'Square':
+            filename = 'Square.json'
+        if cls.__name__ == 'Base':
+            filename = 'Base.json'
+        list_dictionaries = []
+        for obj in list_objs:
+            temp_dict = obj.to_dictionary()
+            list_dictionaries.append(temp_dict)
+        json_str = cls.to_json_string(list_dictionaries)
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(json_str)
+        
