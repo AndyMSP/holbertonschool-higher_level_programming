@@ -59,6 +59,6 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """create objects from dictionary"""
-        obj = cls(1, 1)
+        obj = cls(**dictionary)
         obj.update(**dictionary)
         return obj
