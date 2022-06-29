@@ -47,4 +47,3 @@ class Base:
         json_str = cls.to_json_string(list_dictionaries)
         with open(filename, 'w', encoding='utf-8') as f:
             f.write(json_str)
-        
