@@ -3,7 +3,7 @@ SELECT
 	score,
 	name
 FROM
-	third_table
+	second_table
 WHERE
 	name IS NOT NULL
 ORDER BY
