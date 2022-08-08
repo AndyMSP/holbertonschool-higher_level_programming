@@ -25,4 +25,3 @@ if __name__ == "__main__":
     # Close cursors and databases
     cur.close()
     db.close()
-
