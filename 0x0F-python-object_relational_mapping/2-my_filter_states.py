@@ -18,8 +18,9 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     # Perform queries
-    cur.execute("SELECT * FROM states WHERE name = \"{}\" ORDER \
-    BY states.id ASC".format(match))
+    query = "SELECT * FROM states WHERE name = \"{}\" ORDER BY states.id ASC".format(match)
+    # print(query)
+    cur.execute(query)
     states = cur.fetchall()
     for record in states:
         print(record)
