@@ -21,3 +21,8 @@ if __name__ == "__main__":
     states = cur.fetchall()
     for record in states:
         print(record)
+
+    # Close cursors and databases
+    cur.close()
+    db.close()
+
