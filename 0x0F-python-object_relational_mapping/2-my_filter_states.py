@@ -18,11 +18,10 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     # Perform queries
-    cur.execute('SELECT * FROM states ORDER BY id ASC')
+    cur.execute("SELECT * FROM states WHERE name = \"{}\"".format(match))
     states = cur.fetchall()
     for record in states:
-        if record[1] == match:
-            print(record)
+        print(record)
 
     # Close cursors and databases
     cur.close()
