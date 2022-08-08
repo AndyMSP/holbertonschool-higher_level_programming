@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Lists all states in a database"""
+"""Lists all states in a table starting with 'N'"""
 
 if __name__ == "__main__":
     import MySQLdb

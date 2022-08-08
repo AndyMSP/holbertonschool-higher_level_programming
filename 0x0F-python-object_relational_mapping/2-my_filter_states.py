@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Lists all states in a table"""
+"""Lists all values from table matching user input"""
 
 if __name__ == "__main__":
     import MySQLdb
@@ -9,6 +9,7 @@ if __name__ == "__main__":
     MY_USER = sys.argv[1]
     MY_PASS = sys.argv[2]
     MY_DB = sys.argv[3]
+    match = sys.argv[4]
 
     # Connect to database
     db = MySQLdb.connect(host=MY_HOST, user=MY_USER, passwd=MY_PASS, db=MY_DB)
@@ -20,7 +21,8 @@ if __name__ == "__main__":
     cur.execute('SELECT * FROM states ORDER BY id ASC')
     states = cur.fetchall()
     for record in states:
-        print(record)
+        if record[1] == match:
+            print(record)
 
     # Close cursors and databases
     cur.close()
