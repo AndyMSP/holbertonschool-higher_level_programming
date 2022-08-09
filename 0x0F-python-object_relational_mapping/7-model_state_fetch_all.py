@@ -18,6 +18,3 @@ if __name__ == "__main__":
     l_states = local_session.query(State).all()
     for item in l_states:
         print(f"{item.id}: {item.name}")
-
-
-
