@@ -18,7 +18,7 @@ if __name__ == "__main__":
     results = local_session.query(State).first()
 
     # Print results
-    if results == NULL:
+    if results == None:
         print("Nothing")
     else:
-        print(f"{l_states.id}: {l_states.name}")
+        print(f"{results.id}: {results.name}")
