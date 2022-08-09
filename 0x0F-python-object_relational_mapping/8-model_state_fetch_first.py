@@ -15,5 +15,10 @@ if __name__ == "__main__":
     local_session = Session(bind=engine)
 
     # Perform query
-    l_states = local_session.query(State).first()
-    print(f"{l_states.id}: {l_states.name}")
+    results = local_session.query(State).first()
+
+    # Print results
+    if results == NULL:
+        print("Nothing")
+    else:
+        print(f"{l_states.id}: {l_states.name}")
