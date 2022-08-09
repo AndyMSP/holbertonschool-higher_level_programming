@@ -23,3 +23,6 @@ if __name__ == "__main__":
     # Add to database
     local_session.add(new_state)
     local_session.commit()
+
+    # Print new state id
+    print(new_state.id)
