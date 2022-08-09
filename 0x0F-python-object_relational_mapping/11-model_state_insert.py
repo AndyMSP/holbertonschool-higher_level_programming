@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module to add object to states table"""
 
 if __name__ == "__main__":
     from model_state import Base, State
