@@ -20,8 +20,8 @@ if __name__ == "__main__":
     local_session = Session(bind=engine)
 
     # Perform query
-    l_cities = local_session.query(City.name, City.id, State.name).join(State).order_by(City.id).all()
+    l_cities = local_session.query(City.name, City.id, State.name)\
+        .join(State).order_by(City.id).all()
 
     for item in l_cities:
         print(f"{item[2]}: ({item[1]}) {item[0]}")
-    
