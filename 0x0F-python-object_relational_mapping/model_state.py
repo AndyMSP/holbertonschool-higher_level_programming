@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""module defines Base class and state class"""
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import declarative_base
