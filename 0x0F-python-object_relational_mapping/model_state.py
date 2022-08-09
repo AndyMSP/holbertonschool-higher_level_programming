@@ -10,7 +10,7 @@ Base = declarative_base()
 
 
 # Create states class
-class state(Base):
+class State(Base):
     """Definition of states class"""
 
     __tablename__ = 'states'
