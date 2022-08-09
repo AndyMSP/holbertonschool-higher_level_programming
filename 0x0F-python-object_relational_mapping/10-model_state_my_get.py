@@ -11,6 +11,7 @@ if __name__ == "__main__":
     user = argv[1]
     password = argv[2]
     db = argv[3]
+    match = argv[4]
 
     # Create engine and local_session
     connect_string = f"mysql+mysqldb://{user}:{password}@localhost/{db}"
@@ -19,11 +20,11 @@ if __name__ == "__main__":
     local_session = Session(bind=engine)
 
     # Perform query
-    results = local_session.query(State).filter(State.name.contains('a')).all()
+    results = local_session.query(State).filter(State.name == match).all()
 
     # Print results
     if results is None:
-        print("Nothing")
+        print("Not found")
     else:
         for item in results:
-            print(f"{item.id}: {item.name}")
+            print(item.id)
