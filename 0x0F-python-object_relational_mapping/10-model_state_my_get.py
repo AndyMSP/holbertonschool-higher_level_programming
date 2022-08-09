@@ -23,7 +23,7 @@ if __name__ == "__main__":
     results = local_session.query(State).filter(State.name == match).all()
 
     # Print results
-    if results is None:
+    if len(results) == 0:
         print("Not found")
     else:
         for item in results:
