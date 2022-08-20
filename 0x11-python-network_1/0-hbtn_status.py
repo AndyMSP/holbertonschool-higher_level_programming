@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# fetches a link and formats body contents
+"""fetches a link and formats body contents"""
 
 if __name__ == "__main__":
     import urllib.request
