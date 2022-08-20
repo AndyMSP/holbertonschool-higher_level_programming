@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# fetches https://intranet.hbtn.io/status and formats body contents
+# fetches a link and formats body contents
 
 if __name__ == "__main__":
     import urllib.request
