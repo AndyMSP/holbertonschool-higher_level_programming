@@ -4,7 +4,7 @@
 import urllib.request
 
 with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
-	content = response.read()
+    content = response.read()
 print("Body response:")
 print(f"\t- type: {type(content)}")
 print(f"\t- content: {content}")
