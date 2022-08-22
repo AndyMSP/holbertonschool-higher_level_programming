@@ -14,7 +14,7 @@ if __name__ == '__main__':
     url = 'http://0.0.0.0:5000/search_user'
     payload = {'q': letter}
 
-    r = requests.post(url, payload)
+    r = requests.post(url, data=payload)
 
     try:
         data = r.json()
