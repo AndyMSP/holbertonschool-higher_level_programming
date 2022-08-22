@@ -11,7 +11,7 @@ if __name__ == '__main__':
     else:
         letter = ""
 
-    url = 'http://tacobell.tech'
+    url = 'http://0.0.0.0:5000/search_user'
     payload = {'q': letter}
 
     r = requests.post(url, payload)
