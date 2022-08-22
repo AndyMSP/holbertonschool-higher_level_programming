@@ -21,7 +21,7 @@ if __name__ == '__main__':
         if (data.get('id') and data.get('name')):
             id, name = data.get('id'), data.get('name')
             print("[i{}] {}".format(id, name))
-        else:
+        elif (data == {}):
             print("No result")
     except Exception:
         print('Not a valid JSON')
