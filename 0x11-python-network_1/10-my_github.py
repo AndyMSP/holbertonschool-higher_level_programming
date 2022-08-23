@@ -11,7 +11,6 @@ if __name__ == '__main__':
 
     url = "http://api.github.com/users/andyMSP"
     payload = {'Authorization': 'token ' + token}
-    print(payload)
 
     r = requests.get(url, params=payload)
     data = r.json()
