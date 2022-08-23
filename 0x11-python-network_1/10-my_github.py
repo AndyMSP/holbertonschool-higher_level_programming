@@ -7,12 +7,12 @@ if __name__ == '__main__':
     import requests
 
     username = sys.argv[1]
-    pat = sys.argv[2]
+    token = sys.argv[2]
 
-    url = "http://api.github.com/user"
-    payload = {'authorization': pat}
+    url = "http://api.github.com/users/andyMSP"
+    payload = {'Authorization': 'token ' + token}
     print(payload)
 
     r = requests.get(url, params=payload)
-    print(r.headers['X-RateLimit-Limit'])
-    print(r.headers['x-ratelimit-remaining'])
+    data = r.json()
+    print(data['id'])
