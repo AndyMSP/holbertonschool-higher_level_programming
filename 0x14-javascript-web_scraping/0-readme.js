@@ -5,7 +5,6 @@ const fs = require('fs');
 
 const file = process.argv[2];
 
-// Asynchronous version
 function callback (error, data) {
   if (error) {
     console.log(error);
