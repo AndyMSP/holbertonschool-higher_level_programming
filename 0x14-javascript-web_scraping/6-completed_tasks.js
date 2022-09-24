@@ -5,7 +5,7 @@ const axios = require('axios');
 
 const url = process.argv[2] + '?completed=true';
 
-const count = [];
+const count = {};
 
 axios.get(url)
   .then(response => {
@@ -16,9 +16,5 @@ axios.get(url)
       }
       count[task.userId]++;
     });
-    for (const i in count) {
-      if (count[i] !== 0) {
-        console.log('\'' + i + '\': ' + count[i]);
-      }
-    }
+    console.log(count);
   });
