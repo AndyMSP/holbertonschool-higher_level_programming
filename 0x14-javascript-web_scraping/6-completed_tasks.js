@@ -14,7 +14,9 @@ axios.get(url)
       if (count[task.userId] === undefined) {
         count[task.userId] = 0;
       }
-      count[task.userId]++;
+      if (task.completed) {
+        count[task.userId]++;
+      }
     });
     console.log(count);
   });
