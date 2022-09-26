@@ -2,4 +2,4 @@ function turnRed () {
   $(this).css('color', '#FF0000');
 }
 
-$('header').bind('click', turnRed);
+$('#red_header').bind('click', turnRed);
