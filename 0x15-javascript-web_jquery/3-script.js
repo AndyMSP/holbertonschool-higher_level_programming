@@ -1,5 +1,5 @@
 function addRedClass () {
-    $(this).addClass('red')
+    $("header").addClass('red')
 }
 
 $('#red_header').bind('click', addRedClass);
