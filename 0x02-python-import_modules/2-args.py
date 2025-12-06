@@ -6,9 +6,8 @@ if __name__ == "__main__":
     if len(args) == 1:
         print("0 arguments")
     elif len(args) == 2:
-        print("1 argument:")
+        print(f"1 argument:\n1: {args[1]}")
     else:
         print(f"{len(args) - 1} arguments:")
-
-    for i in range(1, len(args)):
-        print(f"{i}: {args[i]}")
+        for i in range(1, len(args)):
+            print(f"{i}: {args[i]}")
