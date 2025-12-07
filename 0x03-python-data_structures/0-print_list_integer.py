@@ -2,6 +2,15 @@
 
 
 def print_list_integer(my_list=[]):
+    """
+    Prints a list of integers
+
+    args:
+        my_list: a list of integers
+
+    Return:
+        no return value
+    """
     for i in my_list:
         print(i)
 
