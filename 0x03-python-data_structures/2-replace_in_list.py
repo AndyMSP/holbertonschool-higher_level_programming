@@ -11,15 +11,13 @@ def replace_in_list(my_list, idx, element):
 
     Return: Modified list
     """
-    if idx < 0:
-        return None
-    if idx >= len(my_list):
+    if idx < 0 or idx >= len(my_list):
         return my_list
     my_list[idx] = element
     return my_list
 
 
 if __name__ == "__main__":
-    li = [0, 1, 2, 3, 4, 5]
-    replace_in_list(li, 2, "hello")
+    li = [0, 1, 2]
+    replace_in_list(li, 3, "hello")
     print(li)
