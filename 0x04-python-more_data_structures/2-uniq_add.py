@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-from functools import reduce
 
 
 def uniq_add(my_list=[]):
     uniq = set(my_list)
-    sum = reduce(lambda x, y: x + y, uniq)
+    sum = 0
+    for i in uniq:
+        sum += i
     return sum
 
 
