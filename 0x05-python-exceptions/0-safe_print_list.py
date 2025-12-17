@@ -15,4 +15,4 @@ def safe_print_list(my_list=[], x=0):
 
 
 if __name__ == "__main__":
-    safe_print_list([1, 2, 3, 4, 5], 3)
+    safe_print_list([1, 2, 3, 4, 5], 1)
