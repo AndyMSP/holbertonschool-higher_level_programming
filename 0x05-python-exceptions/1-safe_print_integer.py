@@ -5,9 +5,9 @@ def safe_print_integer(value):
     try:
         print("{:d}".format(value))
         return True
-    except ValueError:
+    except (ValueError, TypeError):
         return False
 
 
 if __name__ == "__main__":
-    print(safe_print_integer(123))
+    print(safe_print_integer({89}))
