@@ -1,8 +1,13 @@
 #!/usr/bin/python3
-"""Module containing the Rectangle class definition"""
+"""
+This module will provide a class
+that define an empty square
+"""
 
 
 class Rectangle:
-    """Defines a rectangle object"""
+    """
+    An empty class that define a sqr
+    """
 
     pass

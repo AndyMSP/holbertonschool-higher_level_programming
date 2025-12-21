@@ -33,10 +33,32 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = h
 
+    def area(self):
+        return self.width * self.height
+
+    def perimeter(self):
+        if self.width == 0 or self.height == 0:
+            return 0
+        else:
+            return self.width * 2 + self.height * 2
+
 
 if __name__ == "__main__":
-    try:
-        r1 = Rectangle(0, 3)
-        print(r1.__dict__)
-    except Exception as e:
-        print(e)
+    my_rectangle = Rectangle(2, 4)
+    print(
+        "Area: {} - Perimeter: {}".format(
+            my_rectangle.area(),
+            my_rectangle.perimeter(),
+        )
+    )
+
+    print("--")
+
+    my_rectangle.width = 10
+    my_rectangle.height = 3
+    print(
+        "Area: {} - Perimeter: {}".format(
+            my_rectangle.area(),
+            my_rectangle.perimeter(),
+        )
+    )
