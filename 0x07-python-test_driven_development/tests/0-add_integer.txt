@@ -44,3 +44,9 @@ raises proper exception when None is passed to b
 Traceback (most recent call last):
 TypeError: b must be an integer
 
+raises proper exception when NaN is passed as argument
+>>> import math
+>>> nan = math.nan
+>>> add_integer(nan, 2)
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
