@@ -54,6 +54,11 @@ ValueError: cannot convert float NaN to integer
 raises proper error for overflow
 >>> import sys
 >>> max_float = sys.float_info.max
->>> add_integer(max_float ** 99, 2)
+>>> add_integer(max_float ** 99, 2) #doctest: +ELLIPSIS
 Traceback (most recent call last):
-OverflowError: (34, 'Numerical result out of range')
+OverflowError: ...
+
+raises proper error for infinity
+>>> add_integer(float('inf'), 2) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+OverflowError: ...
