@@ -1,5 +1,9 @@
 Test the 0-add_integer module
 
 >>> add_integer = __import__("0-add_integer").add_integer
->>> add_integer(1, 2)
-3
+>>> add_integer(5, 6)
+11
+
+>>> add_integer("hello", 6)
+Traceback (most recent call last):
+TypeError: a must be an integer
