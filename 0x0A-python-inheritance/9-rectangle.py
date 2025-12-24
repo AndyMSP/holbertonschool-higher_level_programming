@@ -20,7 +20,7 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """Return human readable string representation of Rectangle instance"""
-        return f"[Rectangle] {self.__width}/{self.__height}"
+        return f"[{type(self).__name__}] {self.__width}/{self.__height}"
 
 
 if __name__ == "__main__":
