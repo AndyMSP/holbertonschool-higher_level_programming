@@ -1,0 +1,25 @@
+Test the 1-my_list module
+
+MyList class can be imported
+>>> MyList = __import__('1-my_list').MyList
+
+A list can be created
+>>> l1 = MyList()
+
+A list can be appended
+>>> l2 = MyList()
+>>> l2.append(1)
+>>> l2.append(4)
+>>> l2.append(2)
+>>> l2.append(3)
+>>> l2.append(5)
+>>> print(l2)
+[1, 4, 2, 3, 5]
+
+MyList.print_sorted works
+>>> print(l2)
+[1, 4, 2, 3, 5]
+>>> l2.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(l2)
+[1, 4, 2, 3, 5]
