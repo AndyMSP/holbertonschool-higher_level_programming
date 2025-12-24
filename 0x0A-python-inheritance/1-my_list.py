@@ -7,9 +7,9 @@ class MyList(list):
 
     def print_sorted(self):
         """prints a list of ints sorted ascending"""
-        s = self[:]
-        s.sort()
-        print(s)
+        tmp = self[:]
+        tmp.sort()
+        print(tmp)
 
 
 if __name__ == "__main__":
